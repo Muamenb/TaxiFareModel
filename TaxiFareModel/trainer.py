@@ -40,6 +40,7 @@ class Trainer():
         """evaluates the pipeline on df_test and return the RMSE"""
         y_pred = self.pipeline.predict(X_test)
         rmse = compute_rmse(y_pred, y_test)
+        return rmse
 
 
 if __name__ == "__main__":
@@ -57,4 +58,3 @@ if __name__ == "__main__":
     trainer.run()
     # evaluate
     trainer.evaluate(X_test, y_test)
-    print(trainer.evaluate(X_test, y_test))
